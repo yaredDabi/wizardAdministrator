@@ -15,12 +15,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.bcbsfl.wizardAdmin.model.Role;
 import com.bcbsfl.wizardAdmin.model.User;
 import com.bcbsfl.wizardAdmin.repository.RoleRepository;
 import com.bcbsfl.wizardAdmin.repository.UserRepository;
-
+@Service("userService")
 public class UserServiceImpl implements UserService, UserDetailsService {
 
 	@Autowired
